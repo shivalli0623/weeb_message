@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'input_box.dart';
 import 'model/transform_logic.dart';
 
-class TextDisplay extends StatefulWidget {
-  const TextDisplay({Key? key, required this.textController}) : super(key: key);
+class MessageDisplay extends StatefulWidget {
+  const MessageDisplay({Key? key, required this.textController}) : super(key: key);
 
   final TextEditingController textController;
 
   @override
-  _TextDisplayState createState() => _TextDisplayState();
+  _MessageDisplayState createState() => _MessageDisplayState();
 }
 
-class _TextDisplayState extends State<TextDisplay> {
+class _MessageDisplayState extends State<MessageDisplay> {
   late String _message = '';
 
   event() {
@@ -19,6 +19,11 @@ class _TextDisplayState extends State<TextDisplay> {
     setState(() {
       _message = tempString;
     });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
   }
 
   @override

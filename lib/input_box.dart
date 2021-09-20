@@ -19,7 +19,6 @@ class InputBox extends StatefulWidget {
 class _InputBoxState extends State<InputBox> {
   @override
   void dispose() {
-    // TODO: implement dispose
     widget.textController.dispose();
     super.dispose();
   }

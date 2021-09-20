@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'input_box.dart';
-import 'text_transform.dart';
+import 'message_display.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,16 +35,14 @@ class _MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Container(
+      body: ListView(
         padding: const EdgeInsets.all(8.0),
-        child: ListView(
-          children: [
-            inputBox,
-            TextDisplay(
-              textController: inputBox.textController,
-            )
-          ],
-        ),
+        children: [
+          inputBox,
+          MessageDisplay(
+            textController: inputBox.textController,
+          ),
+        ],
       ),
     );
   }
